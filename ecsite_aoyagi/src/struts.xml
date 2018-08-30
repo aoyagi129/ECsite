@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.devMode" value="true" />
+	<package name="com.internousdev.sampleweb.action" extends="struts-default">
+
+ 	<action name="HomeAction" class="com.internousdev.ecsite_aoyagi.action.HomeAction"
+	 method="execute">
+		<result name="success">home.jsp</result>
+	</action>
+
+	<action name="GoLoginAction" class="com.internousdev.ecsite_aoyagi.action.GoLoginAction"
+	method="execute">
+		<result name="success">login.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	 <action name="LoginAction" class="com.internousdev.ecsite_aoyagi.action.LoginAction"
+	  method="execute">
+		<result name="success">home.jsp</result>
+		<result name="settlement">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="LogoutAction" class="com.internousdev.ecsite_aoyagi.action.LogoutAction"
+	method="execute">
+		<result name="success">home.jsp</result>
+		<result name="error">index.jsp</result>
+	</action>
+
+	<action name="ProductListAction" class="com.internousdev.ecsite_aoyagi.action.ProductListAction"
+	method="execute">
+			<result name="success">productList.jsp</result>
+			<result name="error">home.jsp</result>
+		</action>
+
+	<action name="ProductDetailAction" class="com.internousdev.ecsite_aoyagi.action.ProductDetailAction"
+	method="execute">
+		<result name="success">productDetail.jsp</result>
+		<result name="error">productList.jsp</result>
+	</action>
+
+	<action name="AddCartAction" class="com.internousdev.ecsite_aoyagi.action.AddCartAction"
+	 method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+		<result name="input">cart.jsp</result>
+	</action>
+
+	<action name="CartAction" class="com.internousdev.ecsite_aoyagi.action.CartAction"
+	method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="MyPageAction" class="com.internousdev.ecsite_aoyagi.action.MyPageAction"
+	method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateUserAction" class="com.internousdev.ecsite_aoyagi.action.CreateUserAction"
+	method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	 <action name="CreateUserConfirmAction" class="com.internousdev.ecsite_aoyagi.action.CreateUserConfirmAction"
+	 method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+
+	<action name="CreateUserCompleteAction" class="com.internousdev.ecsite_aoyagi.action.CreateUserCompleteAction"
+	method="execute">
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+	<action name="DeleteCartAction" class="com.internousdev.ecsite_aoyagi.action.DeleteCartAction"
+	 method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">cart.jsp</result>
+	</action>
+
+
+   	<action name="SettlementConfirmAction" class="com.internousdev.ecsite_aoyagi.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	 <action name="SettlementCompleteAction" class="com.internousdev.ecsite_aoyagi.action.SettlementCompleteAction" method="execute">
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">settlementConfirm.jsp</result>
+	</action>
+
+	<action name="PurchaseHistoryAction" class="com.internousdev.ecsite_aoyagi.action.PurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+	</action>
+
+	 <action name="DeletePurchaseHistoryAction" class="com.internousdev.ecsite_aoyagi.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateDestinationAction" class="com.internousdev.ecsite_aoyagi.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.ecsite_aoyagi.action.CreateDestinationConfirmAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.ecsite_aoyagi.action.CreateDestinationCompleteAction" method="execute">
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	</package>
+</struts>
